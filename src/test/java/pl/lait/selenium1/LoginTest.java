@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
+
+@Ignore
 public class LoginTest {
 	
 	WebDriver driver = null;
@@ -17,7 +19,7 @@ public class LoginTest {
 	public void openPage() {
 		driver = Init.getDriver();
 	}
-	@Ignore
+	
 	@Test
 	public void clickOnMenuItems() {
 		Init.sleep(1);

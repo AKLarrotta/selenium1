@@ -14,16 +14,21 @@ public class Init {
 		System.setProperty("webdriver.gecko.driver" , "C:\\Geckodriver\\geckodriver.exe");
         
         DesiredCapabilities cap = DesiredCapabilities.firefox();
-        
+        if (driver == null) {
         driver = new FirefoxDriver(cap);
         driver.get("http://newtours.demoaut.com");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); //maxymalny czas oczekiwania
         driver.manage().window().maximize();//otwiera pełne okno
         return driver;
+        }
+        else {
+        return driver;
+        }
 	}
 
 	public static void endTest() {
 		driver.quit();
+		driver = null;
 	}
 	
 	public static void sleep(int seconds) {

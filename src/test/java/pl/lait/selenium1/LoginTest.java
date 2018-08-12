@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 
-@Ignore
+
 public class LoginTest {
 	
 	WebDriver driver = null;

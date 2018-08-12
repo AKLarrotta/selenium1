@@ -22,7 +22,7 @@ public class Login2Test {
 		LoginPage loginPage = new LoginPage();
 		loginPage.goToLoginPage();
 		loginPage.loginAs("akl12345", "sloneczko26");
-		
+		System.out.println("Zalogowany");
 		ReservationPage reservPage = new ReservationPage();
 		reservPage.fillTheReservationForm();
 		
